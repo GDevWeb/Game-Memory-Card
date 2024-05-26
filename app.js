@@ -98,6 +98,7 @@ function unflipCards() {
     setTimeout(() => {
         cardOne.classList.remove("flipped");
         cardTwo.classList.remove("flipped");
+        [cardOne, cardTwo] = [null, null];
         resetBoard();
     }, 1500);
 }
