@@ -6,7 +6,12 @@ import deckCards from "./deckCards.js";
 const cover = "./ressources/question.svg";
 
 // Clonage du deck concaténation du deckCards * 2:
-const clonedDeckCards = [...deckCards, ...deckCards];
+interface Card {
+  name: string;
+  src: string;
+}
+
+const clonedDeckCards: Card[] = [...deckCards, ...deckCards];
 
 let cardOne: HTMLImageElement | null = null;
 let cardTwo: HTMLImageElement | null = null;
@@ -30,14 +35,14 @@ function shuffleCard(deck: any[]): any[] {
 }
 
 // Mélange des cartes :
-let newDeck = shuffleCard(clonedDeckCards);
+let newDeck: HTMLImageElement[] = shuffleCard(clonedDeckCards);
 
 // Création des cartes dans le DOM :
 function createCards() {
   const cardsPlayground = document.querySelector(
     "#cardsPlayground"
   ) as HTMLElement;
-  newDeck.forEach((card) => {
+  newDeck.forEach((card: HTMLImageElement | null) => {
     // Création d'une nouvelle carte par élément :
     const newCard = document.createElement("div") as HTMLElement;
     newCard.classList.add("card");
@@ -63,7 +68,10 @@ function createCards() {
 
     // Création d'une nouvelle img par cardBack :
     const newCardImgBack = document.createElement("img") as HTMLImageElement;
-    newCardImgBack.src = card.src;
+
+    if (card) {
+      newCardImgBack.src = card.src;
+    }
 
     newCardBack.appendChild(newCardImgBack);
     newCardInner.appendChild(newCardBack);
@@ -80,7 +88,6 @@ function flippedCard() {
   const allCards = document.querySelectorAll(".card");
   allCards.forEach((card) => {
     card.addEventListener("click", () => {
-      // Ignore le clic si la carte est déjà retournée ou si elle est désactivée
       if (
         card.classList.contains("flipped") ||
         card.classList.contains("disabled")
@@ -90,13 +97,11 @@ function flippedCard() {
 
       card.classList.add("flipped");
 
-      // Création de la variable cardImage pour identifier par le src de img :
-      cardImage = card.querySelector(".cardBack img") as HTMLImageElement;
+      // Maintenant, card est considéré comme un élément HTMLElement par TypeScript.
+      const cardImage = card.querySelector(".cardBack img") as HTMLImageElement;
 
-      // Appel de la fonction qui attribue les cartes sélectionnées à 2 variables cardOne et cardTwo:
-      setCardToVariable(card);
+      setCardToVariable(cardImage);
 
-      // Appel de la fonction handlePair pour gérer la paire de cartes :
       if (cardOne && cardTwo) {
         handlePair();
       }
@@ -107,12 +112,10 @@ flippedCard();
 
 // Fonction qui attribue les cartes sélectionnées à des variables :
 function setCardToVariable(card: HTMLImageElement) {
-  // Attribution de la 1ere carte cliquée à la variable cardOne :
   if (!cardOne) {
-    cardOne = cardImage;
+    cardOne = card;
   } else if (!cardTwo) {
-    // Attribution de la 2nd carte cliquée à la variable cardTwo :
-    cardTwo = cardImage;
+    cardTwo = card;
   }
 }
 
@@ -160,8 +163,11 @@ function handlePair() {
         const cardOneElement = cardOne?.closest(".card") as HTMLElement;
         const cardTwoElement = cardTwo?.closest(".card") as HTMLElement;
 
-        cardOneElement?.classList.remove("flipped", "unPair");
-        cardTwoElement?.classList.remove("flipped", "unPair");
+        cardOne?.classList.remove("unPair");
+        cardTwo?.classList.remove("unPair");
+
+        cardOneElement.classList.remove("flipped");
+        cardTwoElement.classList.remove("flipped");
 
         // Réinitialisation des variables :
         cardOne = null;
@@ -207,7 +213,7 @@ function countCard() {
 
 // Fonction qui lance une nouvelle partie dans 10 secondes :
 function newGame() {
-  let discountNewGame = 10;
+  let discountNewGame: number = 10;
   const interval = setInterval(() => {
     discountNewGame--;
     showToast(`Nouvelle partie dans ${discountNewGame} secondes`);

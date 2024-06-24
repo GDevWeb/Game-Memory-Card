@@ -3,7 +3,6 @@
 import deckCards from "./deckCards.js";
 // Variables Globales :
 const cover = "./ressources/question.svg";
-// Clonage du deck concaténation du deckCards * 2:
 const clonedDeckCards = [...deckCards, ...deckCards];
 let cardOne = null;
 let cardTwo = null;
@@ -47,7 +46,9 @@ function createCards() {
         newCardBack.classList.add("cardBack");
         // Création d'une nouvelle img par cardBack :
         const newCardImgBack = document.createElement("img");
-        newCardImgBack.src = card.src;
+        if (card) {
+            newCardImgBack.src = card.src;
+        }
         newCardBack.appendChild(newCardImgBack);
         newCardInner.appendChild(newCardBack);
         newCard.appendChild(newCardInner);
@@ -61,17 +62,14 @@ function flippedCard() {
     const allCards = document.querySelectorAll(".card");
     allCards.forEach((card) => {
         card.addEventListener("click", () => {
-            // Ignore le clic si la carte est déjà retournée ou si elle est désactivée
             if (card.classList.contains("flipped") ||
                 card.classList.contains("disabled")) {
                 return;
             }
             card.classList.add("flipped");
-            // Création de la variable cardImage pour identifier par le src de img :
-            cardImage = card.querySelector(".cardBack img");
-            // Appel de la fonction qui attribue les cartes sélectionnées à 2 variables cardOne et cardTwo:
-            setCardToVariable(card);
-            // Appel de la fonction handlePair pour gérer la paire de cartes :
+            // Maintenant, card est considéré comme un élément HTMLElement par TypeScript.
+            const cardImage = card.querySelector(".cardBack img");
+            setCardToVariable(cardImage);
             if (cardOne && cardTwo) {
                 handlePair();
             }
@@ -81,13 +79,11 @@ function flippedCard() {
 flippedCard();
 // Fonction qui attribue les cartes sélectionnées à des variables :
 function setCardToVariable(card) {
-    // Attribution de la 1ere carte cliquée à la variable cardOne :
     if (!cardOne) {
-        cardOne = cardImage;
+        cardOne = card;
     }
     else if (!cardTwo) {
-        // Attribution de la 2nd carte cliquée à la variable cardTwo :
-        cardTwo = cardImage;
+        cardTwo = card;
     }
 }
 // Fonction pour gérer la paire de cartes :
@@ -126,8 +122,10 @@ function handlePair() {
             setTimeout(() => {
                 const cardOneElement = cardOne?.closest(".card");
                 const cardTwoElement = cardTwo?.closest(".card");
-                cardOneElement?.classList.remove("flipped", "unPair");
-                cardTwoElement?.classList.remove("flipped", "unPair");
+                cardOne?.classList.remove("unPair");
+                cardTwo?.classList.remove("unPair");
+                cardOneElement.classList.remove("flipped");
+                cardTwoElement.classList.remove("flipped");
                 // Réinitialisation des variables :
                 cardOne = null;
                 cardTwo = null;
