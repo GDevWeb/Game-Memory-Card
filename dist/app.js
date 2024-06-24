@@ -198,3 +198,8 @@ const currentYear = new Date().getFullYear().toString();
 if (currentYearElement) {
     currentYearElement.textContent = currentYear;
 }
+/*
+HotFix
+
+Style unpair => ok
+*/
