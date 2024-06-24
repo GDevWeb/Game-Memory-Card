@@ -97,7 +97,7 @@ function flippedCard() {
 
       card.classList.add("flipped");
 
-      // Maintenant, card est considéré comme un élément HTMLElement par TypeScript.
+      
       const cardImage = card.querySelector(".cardBack img") as HTMLImageElement;
 
       setCardToVariable(cardImage);
