@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "target": "ESNext",
+    "noEmitOnError": false,
+    "strict": true,
+    "experimentalDecorators": true, //Decorators
+    "emitDecoratorMetadata": true, //Decorators
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "files": ["src/app.ts"]
+}

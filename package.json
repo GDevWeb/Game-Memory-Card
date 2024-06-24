@@ -1,0 +1,16 @@
+{
+  "name": "game-memory-card",
+  "version": "1.0.0",
+  "description": "Bienvenue sur le projet Memory Cards App 🎴 ! Un jeu de cartes mémoire simple et divertissant. Testez votre mémoire en découvrant les paires de cartes le plus rapidement possible.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.1.4",
+    "typescript": "^5.5.2"
+  }
+}
