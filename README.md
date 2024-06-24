@@ -10,6 +10,7 @@ Bienvenue sur le projet Memory Cards App 🎴 ! Un jeu de cartes mémoire simple
   - [Comment jouer](#comment-jouer)
   - [Demo live :](#demo-live-)
   - [Installation](#installation)
+  - [Mise à jour](#update)
   - [Crédits](#crédits)
   - [Contact](#contact)
 
@@ -35,6 +36,10 @@ Bienvenue sur le projet Memory Cards App 🎴 ! Un jeu de cartes mémoire simple
    git clone https://github.com/Aescanor/Game-Memory-Card.git
    ```
 2. Ouvrez le fichier `index.html` dans votre navigateur.
+
+## Update
+1.  le 24/06/2024 HotFix classe unfair en cas de mauvaise paire
+2.  transition du projet en TypeScript
 
 ## Crédits
 - Conçu et développé par [Dammaretz Gaëtan](https://github.com/Aescanor).
