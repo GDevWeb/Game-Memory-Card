@@ -1,52 +1,72 @@
-﻿# Memory Cards App
 
-Bienvenue sur le projet Memory Cards App 🎴 ! Un jeu de cartes mémoire simple et divertissant. Testez votre mémoire en découvrant les paires de cartes le plus rapidement possible.
+#  Memory Cards App
 
-## Table des matières
-- [Memory Cards App](#memory-cards-app)
-  - [Table des matières](#table-des-matières)
-  - [Aperçu](#aperçu)
-  - [Technologies utilisées](#technologies-utilisées)
-  - [Comment jouer](#comment-jouer)
-  - [Demo live :](#demo-live-)
-  - [Installation](#installation)
-  - [Mise à jour](#update)
-  - [Crédits](#crédits)
-  - [Contact](#contact)
+Bienvenue sur **Memory Cards App**, un mini-jeu interactif pour tester votre mémoire.  
+Le but : retrouver toutes les paires de cartes le plus rapidement possible, avec un minimum d’erreurs.
 
-## Aperçu
+---
+
+##  Aperçu
+
 ![Aperçu du jeu](link-to-screenshot)
 
-## Technologies utilisées
-- HTML
-- CSS
-- JavaScript
+---
 
-## Comment jouer
-1. Ouvrez le fichier `index.html` dans votre navigateur.
-2. Découvrez les paires de cartes en cliquant dessus.
-3. Essayez de terminer le jeu avec le moins d'essais possible.
+##  Démo en ligne
 
-## Demo live :
- https://gdevweb.github.io/Game-Memory-Card/
+- [Jouer maintenant](https://gdevweb.github.io/Game-Memory-Card/)
 
-## Installation
-1. Clonez le repository vers votre machine locale.
-   ```bash
-   git clone https://github.com/Aescanor/Game-Memory-Card.git
-   ```
-2. Ouvrez le fichier `index.html` dans votre navigateur.
+---
 
-## Update
-1.  le 24/06/2024 HotFix classe unfair en cas de mauvaise paire
-2.  transition du projet en TypeScript
+##  Technologies utilisées
 
-## Crédits
-- Conçu et développé par [Dammaretz Gaëtan](https://github.com/Aescanor).
-- Cartes par Dammaretz Gaëtan
+- **HTML5** (structure sémantique)
+- **CSS3** (styles & animations)
+- **JavaScript** (logique du jeu)
+- **TypeScript** (refacto en cours – meilleure maintenance)
 
-## Contact
-- GitHub: [Votre GitHub](https://github.com/Aescanor)
-- LinkedIn: [Votre LinkedIn](https://www.linkedin.com/in/ga%C3%ABtan-dammaretz/)
+---
 
-© Dammaretz Gaëtan - GDWD Tous droits réservés.
+##  Comment jouer
+
+1. Cliquez sur une carte pour la retourner.
+2. Essayez de retrouver les paires.
+3. Le jeu est gagné lorsque toutes les paires sont découvertes.
+
+---
+
+##  Installation locale
+
+```bash
+git clone https://github.com/Aescanor/Game-Memory-Card.git
+cd Game-Memory-Card
+````
+
+Ensuite, ouvrez `index.html` dans votre navigateur.
+
+---
+
+##  Mises à jour
+
+*  **24/06/2024** – Fix logique "unfair" en cas de mauvaise paire
+*  Transition progressive du projet en **TypeScript**
+
+---
+
+##  Crédits
+
+* Développement & design : [Gaëtan Dammaretz](https://github.com/Aescanor)
+* Icônes & illustrations : faites maison 
+
+---
+
+##  Contact
+
+* GitHub : [@GD@evWeb](https://github.com/Aescanor)
+* LinkedIn : [Gaëtan Dammaretz](https://www.linkedin.com/in/gaëtan-dammaretz)
+
+---
+
+© 2025 – *Projet personnel sous licence libre. Utilisation pédagogique autorisée.*
+
+
