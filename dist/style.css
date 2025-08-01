@@ -446,3 +446,10 @@ body::before {
     gap: 15px;
   }
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
