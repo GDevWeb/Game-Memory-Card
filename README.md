@@ -1,72 +1,70 @@
+# 🧠 Memory Kidz – Jeu de cartes mémoires
 
-#  Memory Cards App
-
-Bienvenue sur **Memory Cards App**, un mini-jeu interactif pour tester votre mémoire.  
-Le but : retrouver toutes les paires de cartes le plus rapidement possible, avec un minimum d’erreurs.
-
----
-
-##  Aperçu
-
-![Aperçu du jeu](link-to-screenshot)
+Bienvenue sur **Memory Kidz**, un mini-jeu interactif pour tester votre mémoire.  
+Le but : retrouver toutes les paires le plus rapidement possible, avec un minimum d’erreurs.
 
 ---
 
-##  Démo en ligne
+## 🎮 Aperçu
 
-- [Jouer maintenant](https://gdevweb.github.io/Game-Memory-Card/)
-
----
-
-##  Technologies utilisées
-
-- **HTML5** (structure sémantique)
-- **CSS3** (styles & animations)
-- **JavaScript** (logique du jeu)
-- **TypeScript** (refacto en cours – meilleure maintenance)
+![Aperçu du jeu](./img/memory_kids_v2.png)
 
 ---
 
-##  Comment jouer
+## 🚀 Démo en ligne
+
+👉 [Jouer maintenant](https://gdevweb.github.io/Game-Memory-Card/)
+
+---
+
+## 🛠️ Technologies utilisées
+
+- **HTML5** – structure sémantique
+- **CSS3** – stylisation + animations fluides
+- **JavaScript** – logique du jeu
+- **TypeScript** – refactorisation en cours pour plus de robustesse
+
+---
+
+## 🕹️ Comment jouer
 
 1. Cliquez sur une carte pour la retourner.
-2. Essayez de retrouver les paires.
-3. Le jeu est gagné lorsque toutes les paires sont découvertes.
+2. Tentez de retrouver les paires identiques.
+3. Le jeu se termine quand toutes les paires sont découvertes !
 
 ---
 
-##  Installation locale
+## ⚙️ Installation locale
 
 ```bash
 git clone https://github.com/Aescanor/Game-Memory-Card.git
 cd Game-Memory-Card
-````
+```
 
-Ensuite, ouvrez `index.html` dans votre navigateur.
-
----
-
-##  Mises à jour
-
-*  **24/06/2024** – Fix logique "unfair" en cas de mauvaise paire
-*  Transition progressive du projet en **TypeScript**
+Puis ouvrez simplement le fichier `index.html` dans votre navigateur.
 
 ---
 
-##  Crédits
+## 📝 Mises à jour
 
-* Développement & design : [Gaëtan Dammaretz](https://github.com/Aescanor)
-* Icônes & illustrations : faites maison 
-
----
-
-##  Contact
-
-* GitHub : [@GD@evWeb](https://github.com/Aescanor)
-* LinkedIn : [Gaëtan Dammaretz](https://www.linkedin.com/in/gaëtan-dammaretz)
+- ✅ **24/06/2024** – Fix logique "unfair" sur paires incorrectes
+- 🔄 Migration progressive vers **TypeScript**
+- 🎨 Nouvelle version UI design (Memory Kidz v2)
 
 ---
 
-© 2025 – *Projet personnel sous licence libre. Utilisation pédagogique autorisée.*
+## ✨ Crédits
 
+- Développement & design : [Gaëtan Dammaretz](https://github.com/Aescanor)
+- Illustrations et icônes : création personnelle
 
+---
+
+## 📬 Contact
+
+- GitHub : [@GD@evWeb](https://github.com/Aescanor)
+- LinkedIn : [Gaëtan Dammaretz](https://www.linkedin.com/in/gaëtan-dammaretz)
+
+---
+
+© 2025 – _Projet personnel open-source à but pédagogique._
