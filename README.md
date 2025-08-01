@@ -37,7 +37,7 @@ Le but : retrouver toutes les paires le plus rapidement possible, avec un minimu
 ## ⚙️ Installation locale
 
 ```bash
-git clone https://github.com/Aescanor/Game-Memory-Card.git
+git clone https://github.com/GDevWeb/Game-Memory-Card.git 
 cd Game-Memory-Card
 ```
 
@@ -62,7 +62,7 @@ Puis ouvrez simplement le fichier `index.html` dans votre navigateur.
 
 ## 📬 Contact
 
-- GitHub : [@GD@evWeb](https://github.com/Aescanor)
+- GitHub : [@GD@evWeb](https://github.com/GDevWeb)
 - LinkedIn : [Gaëtan Dammaretz](https://www.linkedin.com/in/gaëtan-dammaretz)
 
 ---
